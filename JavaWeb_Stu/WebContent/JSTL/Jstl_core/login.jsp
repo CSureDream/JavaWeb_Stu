@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,10 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:useBean id="date" class="java.util.Date" />
-	<fmt:formatDate value="${date}" />
-	<br>
-	<fmt:formatDate value="${date}" pattern="yyyy/MM/dd HH:mm:ss:sss" />
-
+<h3>sshshsh</h3>
+   
 </body>
 </html>

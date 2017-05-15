@@ -1,3 +1,7 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -85,8 +89,36 @@
 	%>
 	<c:forTokens var="addr" items="${address}" delims=",;!" varStatus="status">
      ${status.count}、${addr}<br>
-	</c:forTokens>
-	
+	</c:forTokens><hr>
+	<h4>foreach-list</h4>
+	<%
+	List all=new ArrayList();
+	all.add("su");
+	all.add("ki");
+	all.add("sd");
+	all.add("ss");
+	pageContext.setAttribute("ref", all);
+	%>
+	<h4>输出</h4>
+	<c:forEach var="mem" items="${ref }">
+	  ${mem}、
+	</c:forEach>
+	<%
+	Map map=new HashMap();
+	map.put("su","ai");
+	map.put("ki","xi");
+	map.put("sd","tie");
+	map.put("ss","lu");
+	pageContext.setAttribute("ref", map);
+	%>
+	<h4>输出1</h4>
+	<c:forEach var="mem" items="${ref }">
+	  ${mem}<br>
+	</c:forEach>
+	<h4>输出2</h4>
+	<c:forEach var="mem" items="${ref }">
+	  <p>${mem.key}---${mem.value} </p>
+	</c:forEach>
 	
 	
 	
