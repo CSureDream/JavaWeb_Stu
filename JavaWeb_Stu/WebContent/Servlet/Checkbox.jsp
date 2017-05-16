@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form  action="<%= request.getContextPath()%>/Servlet/CheckBox" method="post" target="_blank">
+			<input type="checkbox" name="runoob" checked="checked" /> ss
+			<input type="checkbox" name="google" /> guge
+			<input type="checkbox" name="taobao" />taobao 
+			<input type="submit" value="选择站点"/>
+		</form>
 </body>
 </html>

@@ -11,14 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ServletDemo")
+@WebServlet("/Servlet/ServletDemo")
 public class ServletDemo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public ServletDemo() {
+		public ServletDemo() {
 		super();
 	}
 
@@ -31,12 +27,11 @@ public class ServletDemo extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;Charset=GBK");
-		response.getWriter().append("Served at:").append(request.getContextPath());
-		//response.setCharacterEncoding("GB2312");
+		//response.getWriter().append("Served at:").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		out.println("<HTML>");
 		out.println("<BODY>");
-		out.println("<h2>我们正在学习servlet</H2>");
+		out.println("<H2>我们正在学习servlet</H2>");
 		out.println("<H3>时间：" + new Date() + "</H3>");
 		out.println("</BODY>");
 		out.println("</HTML>");
